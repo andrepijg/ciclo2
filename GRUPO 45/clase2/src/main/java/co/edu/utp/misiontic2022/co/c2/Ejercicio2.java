@@ -7,7 +7,7 @@ public class Ejercicio2 {
     //Ejemplo de constante
 
     // El final es que dice que es un constante, una buena práctica es que la notación de las constantes (nombre) sea en mayúscula.
-    
+
     public static final int CONSTANTE_GLORIA = 12;
     public static final double IVA = 0.19;
 
@@ -44,7 +44,7 @@ public class Ejercicio2 {
     }
 
     public static void presentarPrecioVenta(double precioVentaFinal){
-        System.out.println("--- El precio con IVA es: "+precioVentaFinal+" ----");
+        System.out.println("--- El precio con IVA es $: "+precioVentaFinal+" ----");
     }
 
     //Lógica
