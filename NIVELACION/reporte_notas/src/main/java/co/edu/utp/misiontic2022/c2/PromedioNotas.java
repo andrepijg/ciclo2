@@ -13,11 +13,15 @@ public class PromedioNotas {
     // 
 
     //Funciones que resuelven el problema -> modularizado
+
+    //2) IDENTIFICAR LA PEOR NOTA
+    
     // 1. alcance --> public static
     // 2. tipo de retorno --> int
     // 3. entre llaves argumentos -->
 
     // alcance tipo_de_retorno nombreFuncion {argumentos}
+
     public static int obtenerPeorNota(int nota1, int nota2, int nota3, int nota4, int nota5){
     
     // debemos declarar todas las variables
@@ -25,16 +29,18 @@ public class PromedioNotas {
     // Inicializar
     peorNota =nota1;
 
-    //comparación una por una con las demás -> condicionales no excluyentes
+    //comparación una por una con las demás -> condicionales no excluyentes, si no incluyentes para que me revise cada condición.
+
+    // Incumbente--> Es una variable que me va dejando una memoria de que es lo que mas se ajusta a lo que estoy buscando. Se va actualizando y queda la peor nota. 
+
+    //No están anidados son independientes.
 
     if(peorNota>nota2){
         peorNota = nota2;
     }
-
     if(peorNota>nota3){
         peorNota = nota3;
     }
-
     if(peorNota>nota3){
         peorNota = nota3;
     }
@@ -42,14 +48,17 @@ public class PromedioNotas {
     if(peorNota>nota4){
         peorNota = nota4;
     }
-
     if(peorNota>nota4){
         peorNota = nota4;
     }
-
     return peorNota;
-
 }
+    // Con operador ternario
+    // int peoNota = nota1;
+    // peorNota = nota2 < peorNota ? nota2 : peorNota;
+    // peorNota = nota3 < peorNota ? nota3 : peorNota;
+    // peorNota = nota4 < peorNota ? nota4 : peorNota;
+    // peorNota = nota5 < peorNota ? nota5 : peorNota;
 
 //3)Hallar el promedio ajustado (descartar la peor de las notas) -> 0 a 5 (decimal)
 
@@ -104,7 +113,9 @@ public static void reportarPromedioAjustado(String codigo, double promedioAjusta
 
     System.out.println("Ingrese nota 5: ");
     int nota5 = sc.nextInt();
-
+    
+    sc.close();
+    
     // Ejecutar las funciones -> al paso 3 (internamente realiza el paso 2)
 
     double promedioAjustado = convertirEscala5(calcularPromedioAjustado(nota1, nota2, nota3, nota4, nota5)) ;
