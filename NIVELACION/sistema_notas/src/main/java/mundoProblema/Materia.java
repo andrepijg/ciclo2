@@ -84,7 +84,7 @@ private Estudiante estudianteCursando; //Asociación
         this.nota4.mostrarNota();
         this.nota5.mostrarNota();
         
-                
+        
         System.out.println("******Peor Nota*******");
         this.peorNota.mostrarNota();
         System.out.println("Promedio Ajustado: "+this.promedioAjustado);

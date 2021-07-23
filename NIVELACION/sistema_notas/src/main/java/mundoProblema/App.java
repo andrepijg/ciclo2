@@ -87,9 +87,11 @@ materia.setNota5(new Nota(10));
 materia.mostrarMateria();
 
 
-// Crear Estudiante
-Estudiante estudianteInstanciando = new Estudiante(12345, "Andrea del ¨Pilar", "Jaramillo Garzón");
+// Crear Estudiante y reflejara asociación
+Estudiante estudianteInstanciando = new Estudiante(12345, " Andrea del Pilar", " Jaramillo Garzón");
 Materia materiaAsociadaEstudiante = new Materia(estudianteInstanciando,"Fundamentos Programación",40,50,39,76,96);
+materiaAsociadaEstudiante.obtenerPeorNota();
+materiaAsociadaEstudiante.calcularPromedioAjustado();
 materiaAsociadaEstudiante.mostrarMateria();
 
 }
