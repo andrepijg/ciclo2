@@ -92,7 +92,16 @@ Estudiante estudianteInstanciando = new Estudiante(12345, " Andrea del Pilar", "
 Materia materiaAsociadaEstudiante = new Materia(estudianteInstanciando,"Fundamentos Programación",40,50,39,76,96);
 materiaAsociadaEstudiante.obtenerPeorNota();
 materiaAsociadaEstudiante.calcularPromedioAjustado();
+System.out.println("Mostrar Materia Antes de Agregar Nota");
 materiaAsociadaEstudiante.mostrarMateria();
 
-}
+// Utilizar y mostrar nuevo comportamiento con el ArrayList
+materiaAsociadaEstudiante.adicionarNota(20);
+materiaAsociadaEstudiante.calcularPromedioAustadoColeccion();
+System.out.println("Mostrar Materia Después de Agregar Nota y Calcular");
+materiaAsociadaEstudiante.mostrarMateria();
+
+
+
+    }
 }
