@@ -52,7 +52,7 @@ public class Materia{
         this.nota5.mostrarNota();
         
                 
-        System.out.println("Peor Nota: ");
+        System.out.println("******Peor Nota*******");
         this.peorNota.mostrarNota();
         System.out.println("Promedio Ajustado: "+this.promedioAjustado);
 
