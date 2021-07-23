@@ -68,6 +68,29 @@ public class App
     //Mostrar la materia después del proceso
     materia.mostrarMateria();
 
+    // En un contexto externo 
+
+    System.out.println("Peor nota obtenida desde un contexto externo: ");
+    materia.getPeorNota().mostrarNota();
+
+
+    // Mostrar modificación de nombres de notas desde el contexto de la materiass
+    System.out.println("Nueva versión de la materia:");
+    materia.asignarNombresNotas("Reto1", "Foro2", "Reto4", "Taller de Objetos", "MVC");
+    materia.mostrarMateria();
+
+// Modificar la quinta nota de la materia, que está encapsulada a traves del setter. -> la quinta nota es 10
+//Nota nuevaNota5 = new Nota(10);
+// materia.setNota5(nuevaNota5);
+
+materia.setNota5(new Nota(10));
+materia.mostrarMateria();
+
+
+// Crear Estudiante
+Estudiante estudianteInstanciando = new Estudiante(12345, "Andrea del ¨Pilar", "Jaramillo Garzón");
+Materia materiaAsociadaEstudiante = new Materia(estudianteInstanciando,"Fundamentos Programación",40,50,39,76,96);
+materiaAsociadaEstudiante.mostrarMateria();
 
 }
 }

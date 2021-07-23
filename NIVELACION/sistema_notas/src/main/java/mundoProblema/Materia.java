@@ -3,18 +3,19 @@ package mundoProblema;
 public class Materia{
     //Atributos
 
-    String nombre;
-    double promedio;
-    double promedioAjustado;
-    Nota nota1;
-    Nota nota2;
-    Nota nota3;
-    Nota nota4;
-    Nota nota5;
+private String nombre;
+private double promedio;
+private double promedioAjustado;
+private Nota nota1;
+private Nota nota2;
+private Nota nota3;
+private Nota nota4;
+private Nota nota5;
 
     // Funcionalidades adicionales
-    Nota peorNota;
-    Nota mejorNota;
+private Nota peorNota;
+private Nota mejorNota;
+private Estudiante estudianteCursando; //Asociación
 
     
     // Constructores
@@ -39,11 +40,43 @@ public class Materia{
         
         // Inicializar peorNota
         this.peorNota = new Nota();
+
+        //Inicializar estudiante
+        this.estudianteCursando = new Estudiante();
+    }
+
+
+    // Constructor que refleja la asociación con la clase Estudiante
+    
+    Materia(Estudiante pEstudianteCursando, String pNombre, int n1, int n2, int n3, int n4, int n5){
+
+    this.nombre = pNombre;
+
+    // Construyen las notas de la materia
+
+        this.nota1 = new Nota(n1);
+        this.nota2 = new Nota(n2);
+        this.nota3 = new Nota(n3);
+        this.nota4 = new Nota(n4);
+        this.nota5 = new Nota(n5);
+
+
+        // Incializar los promedios
+        this.promedio = 0;
+        this.promedioAjustado = 0;
+        
+        // Inicializar peorNota
+        this.peorNota = new Nota();
+
+        // Asignación del estudiante
+        this.estudianteCursando = pEstudianteCursando; 
     }
 
     // Métodos Generales
 
     public void mostrarMateria(){
+        System.out.println();
+        System.out.println();
         System.out.println("******Materia******\n" +this.nombre);
         this.nota1.mostrarNota();
         this.nota2.mostrarNota();
@@ -55,6 +88,8 @@ public class Materia{
         System.out.println("******Peor Nota*******");
         this.peorNota.mostrarNota();
         System.out.println("Promedio Ajustado: "+this.promedioAjustado);
+        this.estudianteCursando.mostrarInfoEstudiante();
+        
 
     }
 
@@ -94,6 +129,16 @@ public class Materia{
 public void generarMensajePromedioAjustado(){
     System.out.println("El promedio ajustado es "+ this.promedioAjustado);
 }
+
+//Asignar nombres a las notas
+
+public void asignarNombresNotas (String nom1, String nom2,String nom3, String nom4, String nom5){
+    this.nota1.setNombre(nom1);
+    this.nota2.setNombre(nom2);
+    this.nota3.setNombre(nom3);
+    this.nota4.setNombre(nom4);
+    this.nota5.setNombre(nom5);
+}
     // Getters
 
     public Nota getPeorNota() {
@@ -109,5 +154,7 @@ public void generarMensajePromedioAjustado(){
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-
+public void setNota5(Nota nota5) {
+    this.nota5 = nota5;
+}
 }
