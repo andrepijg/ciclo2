@@ -101,7 +101,5 @@ materiaAsociadaEstudiante.calcularPromedioAustadoColeccion();
 System.out.println("Mostrar Materia Después de Agregar Nota y Calcular");
 materiaAsociadaEstudiante.mostrarMateria();
 
-
-
     }
 }

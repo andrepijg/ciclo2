@@ -102,6 +102,14 @@ public class Nota {
 
         }
 
+    public Nota(String pNombre, int pEscala100){
+        this.nombre = pNombre;
+        this.escala100 = pEscala100;
+        this.cualitativo = pEscala100>=APROBADO_ESCALA100 ? "Aprobado":"Reprobado";
+        this.escala5 = (double)(pEscala100/20);
+    
+            }
+
         Nota(String pNombre, int pEscala100, double pEscala5, String pCualitativo){
         this.nombre = pNombre;
         this.escala100 = pEscala100;

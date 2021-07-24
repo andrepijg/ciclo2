@@ -68,7 +68,7 @@ private ArrayList <Nota> coleccionNotas  = new ArrayList <Nota>();
 
     // Constructor que refleja la asociación con la clase Estudiante
     
-    Materia(Estudiante pEstudianteCursando, String pNombre, int n1, int n2, int n3, int n4, int n5){
+    public Materia(Estudiante pEstudianteCursando, String pNombre, int n1, int n2, int n3, int n4, int n5){
 
     this.nombre = pNombre;
 
@@ -193,6 +193,20 @@ public void adicionarNota(int pEscala100){
 
     // Construir la nota
     Nota nuevaNota = new Nota(pEscala100);
+
+    // Agregar a la colección de notas
+
+    this.coleccionNotas.add(nuevaNota);
+
+    // Equivalente en una sola linea
+    //this.coleccionNotas.add(new Nota(pEscala100));
+
+} 
+
+public void adicionarNota(int pEscala100, String pNombre){
+
+    // Construir la nota
+    Nota nuevaNota = new Nota(pNombre,pEscala100);
 
     // Agregar a la colección de notas
 
