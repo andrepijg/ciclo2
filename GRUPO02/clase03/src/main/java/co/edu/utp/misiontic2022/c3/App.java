@@ -39,6 +39,5 @@ public class App
     
         System.out.println(casilla.verCasilla(1,5, alfil1jug1));
 
-
         }
     }
