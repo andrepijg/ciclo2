@@ -16,4 +16,6 @@ public class Alfil extends Ficha {
     public String toString(){
         return "Alfil --> Color: " + super.getColor() + "Volumen: " + volumen; // de la super clase quiero extraer el color
     }
+
+    
 }

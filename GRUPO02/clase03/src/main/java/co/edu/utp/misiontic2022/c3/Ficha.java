@@ -31,4 +31,6 @@ public class Ficha {
     public String toString(){
         return "Color" + color;
     }
+
+    
 }

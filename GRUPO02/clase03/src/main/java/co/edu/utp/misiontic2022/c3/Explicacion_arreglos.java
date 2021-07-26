@@ -31,6 +31,7 @@ public class Explicacion_arreglos
             6 < 7  V            arreglo[6]=14   7
             7 < 7  F       
         */
-    
+        
+        
     }
 }

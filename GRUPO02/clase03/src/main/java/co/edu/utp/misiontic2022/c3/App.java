@@ -39,5 +39,23 @@ public class App
     
         System.out.println(casilla.verCasilla(1,5, alfil1jug1));
 
+        // Arreglo de objetos tipo Ficha
+        Ficha[] ficha = new Ficha[6];
+
+        ficha[0] = torre1jug1;
+        ficha[1] = torre2jug1;
+        ficha[2] = torre1jug2;
+        ficha[3] = torre2jug2;
+        ficha[4] = alfil1jug1;
+        ficha[5] = new Alfil("Negro", 15.20);
+
+        for (int i = 0; i < ficha.length; i++) {
+            System.out.println("ficha ["+i+"] ="+ficha[i]);
+            System.out.println(ficha[i].mover());
+            
+        }
+
+
+
         }
     }
