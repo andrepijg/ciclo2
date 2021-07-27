@@ -1,5 +1,6 @@
 package co.edu.utp.misiontic2022.c2;
 
+
 public class PrecioTotal {
 
     //Atributos
@@ -9,6 +10,7 @@ public class PrecioTotal {
     private double totalCabina;
     public Equipaje[] equipaje;
 
+    //private ArrayList<Equipaje> equipaje = new ArrayList<Equipaje>();
     // constructores
 
     public PrecioTotal(double totalPrecios, double totalBodega, double totalCabina, Equipaje[] equipaje) {
@@ -18,11 +20,7 @@ public class PrecioTotal {
         this.equipaje = equipaje;
     }
 
-    public PrecioTotal(Equipaje[] equipaje) {
-        this.equipaje = equipaje;
-    }
-    
-    // Métodos
+        // Métodos
 
     // public void calcularTotales() {
     //     for (Equipaje equipaje1 : equipaje) {
@@ -35,6 +33,9 @@ public class PrecioTotal {
     //         }
     //     }
 
+    public PrecioTotal(Equipaje[] equipaje2) {
+    }
+
     public void calcularTotales(){
         for (int i = 0; i <= (equipaje.length-1); i++) {
             totalPrecios = totalPrecios + equipaje[i].calcularPrecio();
@@ -45,8 +46,18 @@ public class PrecioTotal {
                 }
             }
         }
-                
-                
+
+    // PARA ANALIZAR        
+    // public void calcularTotales(){
+    //     for (int i = 0; i < (this.equipaje.size()); i++) {
+    //         totalPrecios = totalPrecios + this.equipaje.get(i).calcularPrecio();
+    //         if (this.equipaje.get(i).getClass()==Bodega.class){
+    //             totalBodega = totalBodega + this.equipaje.get(i).calcularPrecio();
+    //         }else{
+    //             totalCabina = totalCabina + this.equipaje.get(i).calcularPrecio();
+    //             }
+    //         }
+    //     }
 
     public void mostrarTotales(){
         calcularTotales();
