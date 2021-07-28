@@ -32,7 +32,7 @@ public class App extends JFrame {
         resultado.setText("Resultado");
         resultado.setBounds(95,400, 100, 30);
         this.add(resultado);
-
+    
         // Adicionando un evento action al botón
         boton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
@@ -41,10 +41,12 @@ public class App extends JFrame {
                 int num1 = Integer.parseInt(campo1.getText());
                 int num2 = Integer.parseInt(campo2.getText());
                 int suma = num1 + num2;
-                resultado.setText(String.valueOf(suma));
+                //resultado.setText(String.valueOf(suma));
+                resultado.setText(Integer.toString(suma)); 
             }
-        });
-    } // construtor
+        });     
+    
+    }// construtor
 
     public static void main(String[] args) {
         App ejemplo = new App();
@@ -52,3 +54,4 @@ public class App extends JFrame {
     } // método main
 
 } // clase
+        

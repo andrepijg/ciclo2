@@ -13,15 +13,6 @@ public class PrecioTotal {
     //private ArrayList<Equipaje> equipaje = new ArrayList<Equipaje>();
     // constructores
 
-    public PrecioTotal(double totalPrecios, double totalBodega, double totalCabina, Equipaje[] equipaje) {
-        this.totalPrecios = totalPrecios;
-        this.totalBodega = totalBodega;
-        this.totalCabina = totalCabina;
-        this.equipaje = equipaje;
-    }
-
-        // Métodos
-
     // public void calcularTotales() {
     //     for (Equipaje equipaje1 : equipaje) {
     //     totalPrecios = totalPrecios + equipaje1.calcularPrecio();
@@ -33,10 +24,11 @@ public class PrecioTotal {
     //         }
     //     }
 
-    public PrecioTotal(Equipaje[] equipaje2) {
+    public PrecioTotal(Equipaje[] equipaje) {
+        this.equipaje = equipaje;
     }
-
-    public void calcularTotales(){
+    
+        public void calcularTotales(){
         for (int i = 0; i <= (equipaje.length-1); i++) {
             totalPrecios = totalPrecios + equipaje[i].calcularPrecio();
             if (equipaje[i].getClass()==Bodega.class){
@@ -46,7 +38,7 @@ public class PrecioTotal {
                 }
             }
         }
-
+    
     // PARA ANALIZAR        
     // public void calcularTotales(){
     //     for (int i = 0; i < (this.equipaje.size()); i++) {

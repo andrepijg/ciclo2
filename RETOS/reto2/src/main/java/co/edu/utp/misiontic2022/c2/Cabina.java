@@ -19,6 +19,7 @@ public class Cabina extends Equipaje {
         super(pPrecioBase);
     }
 
+    // Método
     public double calcularPrecio(){
         double precioFinal = super.getPrecioBase() + (super.getPeso()*super.getTamanio()*TIEMPO);
         return precioFinal;

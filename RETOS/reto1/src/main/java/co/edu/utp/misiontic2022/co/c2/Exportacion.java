@@ -21,7 +21,13 @@ public class Exportacion {
     
     comparacion = interesCompuesto - interesSimple; 
     
-    respuesta = pTiempo != 0 && pCapital != 0 && pInteres != 0  ? "La diferencia en el total de intereses generados para el proyecto, si escogemos entre evaluarlo a una tasa de interés Compuesto y evaluarlo a una tasa de interés Simple, asciende a la cifra de: $" + comparacion : "Faltan datos para calcular la diferencia en el total de intereses generados para el proyecto.";
+    if (pTiempo != 0 && pCapital != 0) {
+        respuesta =  "La diferencia en el total de intereses generados para el proyecto, si escogemos entre evaluarlo a una tasa de interés Compuesto y evaluarlo a una tasa de interés Simple, asciende a la cifra de: $" + comparacion;
+        }else{
+            respuesta = "Faltan datos para calcular la diferencia en el total de intereses generados para el proyecto.";
+        }
+        
+    // respuesta = pTiempo != 0 && pCapital != 0 && pInteres != 0  ? "La diferencia en el total de intereses generados para el proyecto, si escogemos entre evaluarlo a una tasa de interés Compuesto y evaluarlo a una tasa de interés Simple, asciende a la cifra de: $" + comparacion : "Faltan datos para calcular la diferencia en el total de intereses generados para el proyecto.";
     
     return respuesta;
     }

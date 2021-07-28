@@ -18,8 +18,10 @@ public class Bodega extends Equipaje {
         super(pPrecioBase);
     }
 
+    // método
+
     public double calcularPrecio(){
-    double precioFinal = getPrecioBase() + (getPeso()*getTamanio()*CAPACIDAD);
+    double precioFinal = super.getPrecioBase() + (super.getPeso()*getTamanio()*this.CAPACIDAD);
     return precioFinal;
     }
 }
