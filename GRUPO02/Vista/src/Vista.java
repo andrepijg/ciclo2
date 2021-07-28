@@ -6,6 +6,8 @@ public class Vista extends JFrame {
     public JLabel etiquetaSuma = new JLabel ("+");
     public JTextField txtCampo2 = new JTextField (10);
     public JButton botonSumar = new JButton ("Sumar");
+    //public JLabel etiquetaMultiplicar = new JLabel ("*");
+    //public JButton botonMultiplicar = new JButton ("multiplicar");
     public JTextField txtResultado = new JTextField (10);
 
     public Vista (){
@@ -18,6 +20,7 @@ public class Vista extends JFrame {
         panelCalculadora.add(etiquetaSuma);
         panelCalculadora.add(txtCampo2);
         panelCalculadora.add(botonSumar);
+        //panelCalculadora.add(botonMultiplicar);
         panelCalculadora.add(txtResultado);
         
         this.add(panelCalculadora); // Incorporamos a la calculadora
