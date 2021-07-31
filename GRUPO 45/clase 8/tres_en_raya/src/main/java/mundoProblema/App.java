@@ -36,14 +36,31 @@ public class App
 
     // Poner a trabajar la versión automática del jugadorX
 
-    JugadorX jugadorX = new JugadorX ("Tripulante2022",10,"X");
-    jugadorX.ejecutarEstrategiaAleatoria(tablero);
-    jugadorX.ejecutarEstrategiaAleatoria(tablero);
-    jugadorX.ejecutarEstrategiaAleatoria(tablero);
+    // JugadorX jugadorX = new JugadorX ("Tripulante2022",10,"X");
+    // jugadorX.ejecutarEstrategiaAleatoria(tablero);
+    // jugadorX.ejecutarEstrategiaEspecifica(tablero);
+
+    // JugadorO jugadorO = new JugadorO ("Tripulante000",1,"O");
+    // jugadorO.ejecutarEstrategiaAleatoria(tablero);
+    // jugadorO.ejecutarEstrategiaEspecifica(tablero);
 
     //Revisar el tablero después de movimientos automaticos del jugadorX
-        System.out.println("Después de realizar movimientos");
-        tablero.mostrarTableroConsola();
+        // System.out.println("Después de realizar movimientos");
+        // tablero.mostrarTableroConsola();
+
+    // Forzar alternado de turnos con jugadores asistidos por la máquina
+
+    JugadorX jugadorX = new JugadorX ("Tripulante2022",10,"X");
+    JugadorO jugadorO = new JugadorO ("Tripulante000",1,"O");
+    jugadorX.ejecutarEstrategiaEspecifica(tablero);
+    jugadorO.ejecutarEstrategiaEspecifica(tablero);
+    tablero.mostrarTableroConsola();
+    jugadorX.realizarJugadaManual(tablero);
+    jugadorO.realizarJugadaManual(tablero);
+    tablero.mostrarTableroConsola();
+    jugadorX.ejecutarEstrategiaAleatoria(tablero);
+    jugadorO.ejecutarEstrategiaAleatoria(tablero);
+    tablero.mostrarTableroConsola();
 
 
 
