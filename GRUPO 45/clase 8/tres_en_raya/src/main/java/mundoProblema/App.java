@@ -50,22 +50,22 @@ public class App
 
     // Forzar alternado de turnos con jugadores asistidos por la máquina
 
-    JugadorX jugadorX = new JugadorX ("Tripulante2022",10,"X");
-    JugadorO jugadorO = new JugadorO ("Tripulante000",1,"O");
-    jugadorX.ejecutarEstrategiaEspecifica(tablero);
-    jugadorO.ejecutarEstrategiaEspecifica(tablero);
-    tablero.mostrarTableroConsola();
-    jugadorX.realizarJugadaManual(tablero);
-    jugadorO.realizarJugadaManual(tablero);
-    tablero.mostrarTableroConsola();
-    jugadorX.ejecutarEstrategiaAleatoria(tablero);
-    jugadorO.ejecutarEstrategiaAleatoria(tablero);
-    tablero.mostrarTableroConsola();
-
-
-
-
-
+    // JugadorX jugadorX = new JugadorX ("Tripulante2022",10,"X");
+    // JugadorO jugadorO = new JugadorO ("Tripulante000",1,"O");
+    // jugadorX.ejecutarEstrategiaEspecifica(tablero);
+    // jugadorO.ejecutarEstrategiaEspecifica(tablero);
+    // tablero.mostrarTableroConsola();
+    // jugadorX.realizarJugadaManual(tablero);
+    // jugadorO.realizarJugadaManual(tablero);
+    // tablero.mostrarTableroConsola();
+    // jugadorX.ejecutarEstrategiaAleatoria(tablero);
+    // jugadorO.ejecutarEstrategiaAleatoria(tablero);
+    // tablero.mostrarTableroConsola();
     
-    }
+
+    // Crear el juego
+
+    Juego juego = new Juego("TripulanteX", "TripulanteO");
+    juego.ejecutarJuego();
+}
 }
