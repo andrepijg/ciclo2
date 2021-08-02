@@ -31,7 +31,7 @@ public class PrecioTotal {
         public void calcularTotales(){
         for (int i = 0; i <= (equipaje.length-1); i++) {
             totalPrecios = totalPrecios + equipaje[i].calcularPrecio();
-            if (equipaje[i].getClass()==Bodega.class){
+            if (equipaje[i].getClass()==Bodega.class){ //equipaje[i] instanceof Bodega
                 totalBodega = totalBodega + equipaje[i].calcularPrecio();
             }else{
                 totalCabina = totalCabina + equipaje[i].calcularPrecio();
