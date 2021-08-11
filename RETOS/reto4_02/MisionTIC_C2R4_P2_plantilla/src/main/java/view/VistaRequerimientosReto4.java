@@ -2,8 +2,6 @@ package view;
 
 import controller.ControladorRequerimientosReto4;
 import model.vo.LiderCiudad;
-// import model.vo.LiderCiudad;
-// import model.vo.SumaProveedor;
 import model.vo.ProyectoCiudad;
 import model.vo.SumaProveedor;
 
