@@ -18,3 +18,14 @@ SELECT  l.ID_Lider,
         l.Segundo_Apellido
 FROM    LIDER l
 WHERE   l.ID_Lider = 50;
+
+SELECT  c.ID_Compra,
+        c.Pagado, 
+        c.ID_MaterialConstruccion,
+        mc.Nombre_Material,
+        (c.cantidad * mc.Precio_Unidad) AS Total
+FROM Compra C
+INNER JOIN MaterialConstruccion mc ON c.ID_MaterialConstruccion = mc.ID_MaterialConstruccion
+WHERE c.Pagado ="Si"
+AND mc.Nombre_Material ="Acero"
+ORDER BY Total ASC

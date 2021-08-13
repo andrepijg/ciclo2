@@ -60,7 +60,7 @@ public class ProyectoCiudadDao {
         statement.close();
 
         }catch(SQLException e){
-            System.err.println("Error consultando Proyecto Ciudad!!" +e);
+            System.err.println("Error consultando Proyecto Ciudad!! " +e);
             
         }finally{
             if(conexion != null){
